@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tabLinks.forEach(link => {
         link.addEventListener("click", () => {
-            // Remove 'active-tab' from all tab contents
+            // remove 'active-tab' from all tab contents
             tabContents.forEach(content => content.classList.remove("active-tab"));
 
-            // Remove underline effect from all tab links
+            // remove underline effect from all tab links
             tabLinks.forEach(tab => tab.classList.remove("active"));
 
-            // Normalize text to lowercase id format
+            // normalize text to lowercase id format
             const targetId = link.textContent.trim().toLowerCase();
             const targetContent = document.getElementById(targetId);
 
