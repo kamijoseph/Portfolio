@@ -284,11 +284,13 @@ nav ul li a:hover::after{
     color: #fff;
     transition-duration: 0.5s;
     text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .btn:hover{
     background: #228B22;
-    text-transform: uppercase;
-    font-weight: bold;
     color: antiquewhite;
 }
+
+/* -----------------Contact Section------------------------ */
