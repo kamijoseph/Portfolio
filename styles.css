@@ -1,4 +1,3 @@
-
 /* Styling */
 *{
     margin: 0;
@@ -22,12 +21,15 @@ body{
     height: 100vh;
     background-size: cover;
     background-position: center;
+    /* push header content down so sticky nav doesn't overlap */
+    padding-top: 100px;
 }
 
 .container{
     padding: 10px 10%;
 }
 
+/* base nav layout (still applies because nav has same structure) */
 nav{
     display: flex;
     align-items: center;
@@ -35,10 +37,38 @@ nav{
     flex-wrap: wrap;
 }
 
+/* sticky nav: always visible */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #080808;
+    z-index: 1000;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,0,79,0.08);
+}
+
+/* text logo */
+.logo-text{
+    font-size: 44px;
+    font-weight: 800;
+    color: #ff004f;
+    letter-spacing: 1px;
+}
+
+/* menu */
 .logo{
     width: 140px;
 }
 
+nav ul{
+    margin: 0;
+    padding: 0;
+}
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -67,105 +97,85 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+/* header text */
 .header-text{
-    margin-top: 20%;
+    margin-top: 8%;
     font-size: 30px;
+    text-align: left;
 }
 
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+    line-height: 1.02;
 }
 
 .header-text h1 span{
     color: #ff004f;
-    font-size: 50px;
     font-weight: 500;
 }
 
-/* Sticky Navbar */
-.sticky-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #080808;
-    z-index: 1000;
-    padding: 10px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ff004f;
-}
-
-/* Push header content down so it’s not hidden under navbar */
-#header {
-    padding-top: 100px;
-}
-
-/* Logo text */
-.logo-text {
-    font-size: 50px;
-    font-weight: bold;
-    color: #ff004f;
-    cursor: default;
-}
-
-/* Cursor blink */
+/* typing cursor */
 .cursor {
     display: inline-block;
+    margin-left: 6px;
     animation: blink 0.7s steps(1) infinite;
     color: #ff004f;
-    font-weight: 300;
+    font-weight: 700;
 }
-
 @keyframes blink {
     50% { opacity: 0; }
 }
-
 
 /* ------------------ about section ---------------- */
 #about{
     padding: 80px 0;
     color: #ababab;
+    min-height: 65vh; /* increased height per request */
 }
 
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center; /* vertical align image with content */
+    gap: 24px;
 }
 
 .about-col-1{
-    flex-basis: 35%;
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
 }
 
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 .about-col-2{
-    flex-basis: 60%;
+    flex-basis: 55%;
 }
 
 .sub-title{
-    font-size: 60px;
+    font-size: 36px;
     font-weight: 600;
     color: #fff;
 }
 
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0 20px;
 }
 
 .tab-links{
-    margin-right: 50px;
+    margin-right: 40px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     position: relative;
+    color: #fff;
 }
 
 .tab-links::after{
@@ -176,7 +186,7 @@ nav ul li a:hover::after{
     position: absolute;
     left: 0;
     bottom: -8px;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 .tab-links:hover::after{
@@ -187,16 +197,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span{
-    color: #ff004f;
-    font-size: 16px;
-}
-
+/* tab content */
 .tab-contents{
     display: none;
 }
@@ -205,7 +206,97 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/* --------------- Services section styles------------------ */
+/* Experience list styling */
+#experience ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#experience ul li {
+    margin-bottom: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,0,79,0.1);
+    font-size: 0.95rem;
+}
+
+#experience ul li span {
+    font-weight: bold;
+    color: rgba(255,0,79,1);
+    margin-right: 8px;
+}
+
+/* "See Tech Stack" link */
+#experience p a {
+    color: rgba(255,0,79,1);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#experience p a:hover {
+    color: #fff;
+}
+
+/* Skills list styled like social links */
+.skills-list{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skills-list li{
+    list-style: none;
+}
+
+.skill-link{
+    text-decoration: none;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    transition: transform .12s, color .12s;
+}
+
+.skill-link i{
+    color: #ff004f;
+}
+
+/* on hover mimic social link interaction */
+.skill-link:hover{
+    transform: translateY(-3px);
+    color: #ffb6c6;
+}
+
+/* Tech stack chips */
+.tech-stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.tech-stack-list span {
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.5s ease; /* Smooth animation */
+    cursor: pointer;
+}
+
+.tech-stack-list span:hover {
+    transform: translateY(-3px);
+    background: rgba(255,0,79,1);
+    border-color: rgba(255,0,79,1);
+}
+
+
+/* ------------------ Services section styles------------------ */
 #services{
     padding: 30px 0;
 }
@@ -221,7 +312,7 @@ nav ul li a:hover::after{
     background-color: #262626;
     padding: 40px;
     font-size: 13px;
-    font-weight: 300px;
+    font-weight: 300;
     border-radius: 12px;
     transition: 0.5s, transform 0.5s;
 }
@@ -447,4 +538,20 @@ nav ul li a:hover::after{
     .contact-divider {
         display: none;
     }
+    .header-text{
+        margin-top: 18%;
+        text-align: center;
+    }
+    .logo-text{ font-size: 36px; }
+}
+
+/* About responsive */
+@media (max-width: 900px) {
+    .about-col-1{ flex-basis: 45%; }
+    .about-col-2{ flex-basis: 50%; }
+}
+@media (max-width: 680px) {
+    .row{ flex-direction: column; }
+    .about-col-1, .about-col-2 { width: 100%; }
+    .header-text h1{ font-size: 40px; text-align: center; }
 }

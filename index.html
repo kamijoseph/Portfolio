@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kami Joseph</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
 </head>
 <body>
     <!-- header -->
-    <div id="header">
+     <div id="header">
         <div class="container">
             <nav class="sticky-nav">
+                <!-- logo image removed; text logo instead -->
                 <div class="logo-text">Kami</div>
+
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -25,75 +26,81 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
             <div class="header-text">
                 <h1>
                     Hi, I am Kami<br>
-                    <span id="typing-text"></span><span class="cursor">|</span>
+                    <span id="typing-text" aria-live="polite"></span><span class="cursor">|</span>
                 </h1>
             </div>
         </div>
-    </div>
+     </div>
 
-
-     <!-- about section -->
+     <!-- about section (modified, uses original classes) -->
       <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
                     <img src="public/AI.webp" alt="column 1 Image">
                 </div>
+
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>
-                    From reliable services, clean workplace parlour with an aesthetic
-                    environment that you feel like not leaving to their polite and
-                    honest workers. Everything here is so reliable.
+                      I apply ML, deep learning and data engineering to solve real problems in finance, health and automation. I build production-ready models, pipelines and APIs.
                     </p>
+
                     <div class="tab-titles">
-                        <p class="tab-links" >Skills</p>
-                        <p class="tab-links" >Experience</p>
-                        <p class="tab-links" >Education</p>
+                        <!-- data-target maps to the content id -->
+                        <p class="tab-links active" data-target="skills">Skills</p>
+                        <p class="tab-links" data-target="experience">Experience</p>
+                        <p class="tab-links" data-target="techstack">Tech Stack</p>
                     </div>
+
+                    <!-- Skills -->
                     <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li>
-                                <span>Data Analysis <br> </span> Data Analytics
-                            </li>
-                            <li>
-                                <span>Data Science <br> </span> Machine Learning
-                            </li>
-                            <li>
-                                <span>Artificial Intelligence <br> </span> Deep Learning
-                            </li>
+                        <ul class="skills-list">
+                            <li><a href="#" class="skill-link"><i class="fa-solid fa-brain"></i> Machine Learning</a></li>
+                            <li><a href="#" class="skill-link"><i class="fa-solid fa-database"></i> Data Science</a></li>
+                            <li><a href="#" class="skill-link"><i class="fa-solid fa-network-wired"></i> Deep Learning</a></li>
+                            <li><a href="#" class="skill-link"><i class="fa-solid fa-robot"></i> Artificial Intelligence</a></li>
+                            <li><a href="#" class="skill-link"><i class="fa-solid fa-chart-line"></i> Data Analysis</a></li>
                         </ul>
                     </div>
+
+                    <!-- Experience -->
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>3+ Years</span> Freelance Developer</li>
                             <li><span>1 Year</span> Data Analyst at XYZ Company</li>
                             <li><span>Internship</span> Machine Learning Intern at ABC Institute</li>
                         </ul>
+
+                        <p style="margin-top:12px;">
+                          <a href="#" onclick="document.querySelector('[data-target=techstack]').click(); return false;">See Tech Stack →</a>
+                        </p>
                     </div>
 
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li>
-                                <span>Data Analysis <br> </span> Data Analytics
-                            </li>
-                            <li>
-                                <span>Data Science <br> </span> Machine Learning
-                            </li>
-                            <li>
-                                <span>Artificial Intelligence</span> Deep Learning
-                            </li>
-                        </ul>
+                    <!-- Tech Stack -->
+                    <div class="tab-contents" id="techstack">
+                        <div class="tech-stack-list">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>scikit-learn</span>
+                            <span>TensorFlow</span>
+                            <span>PyTorch</span>
+                            <span>FastAPI</span>
+                            <span>Docker</span>
+                            <span>Git</span>
+                        </div>
                     </div>            
                 </div>
             </div>
         </div>
       </div>
 
-      <!-- Services Section -->
+      <!-- Services Section (unchanged content) -->
     <div id="services">
         <div class="container">
             <h1 class="sub-title">My Services</h1>
@@ -103,7 +110,6 @@
                     <h2>Data Analysis</h2>
                     <p>
                         Robust and clear data analysis and dashbord blah blah blah
-                        blah blah hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
                     </p>
                     <a href="">Learn More</a>
                 </div>
@@ -111,8 +117,7 @@
                     <i class="fa-solid fa-robot"></i>
                     <h2>Data Science</h2>
                     <p>
-                        Data science, models, engineering stuff stuff stuff stuff stufff
-                        jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+                        Data science, models, engineering stuff
                     </p>
                     <a href="">Learn More</a>
                 </div>
@@ -120,9 +125,7 @@
                     <i class="fa-brands fa-app-store-ios"></i>
                     <h2>Deep Learning</h2>
                     <p>
-                        bbeihiujhgvnknvjcnv[a fiohvjfivjiovjmjnvo ofjfokjfnvokvmkvnljknvf
-                        ofvhnjfmv;dmvjndkmkvd fpjmlf,v opjopfk]fjojioghjgkmmbnujgg ttjnvknmobn
-                        fdjnvbdknj dhh.
+                        Deep learning projects and model deployment.
                     </p>
                     <a href="">Learn More</a>
                 </div>
@@ -230,6 +233,5 @@
     </div>
 
     <script src="main.js"></script>
-        
 </body>
 </html>
