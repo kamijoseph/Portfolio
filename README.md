@@ -4,7 +4,7 @@ A modern, responsive, and minimal portfolio website showcasing my skills, projec
 Built with **HTML**, **CSS**, and **JavaScript** for speed and simplicity, and designed for a clean user experience.
 
 ## 🚀 Live Demo
-[Click here to view the live portfolio](https://your-live-demo-link.com)
+[Click here to view the live portfolio](https://kamijoseph.github.io/Portfolio/)
 
 ## ✨ Features
 - Responsive design for mobile, tablet, and desktop
