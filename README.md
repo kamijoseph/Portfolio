@@ -1,10 +1,10 @@
-# Personal Developer Portfolio
+# Kami Developer Portfolio
 
 A modern, responsive, and minimal portfolio website showcasing my skills, projects, and professional experience.  
 Built with **HTML**, **CSS**, and **JavaScript** for speed and simplicity, and designed for a clean user experience.
 
-## 🚀 Live Demo
-[Click here to view the live portfolio](https://kamijoseph.github.io/Portfolio/)
+## 🚀 Live Link
+[Live Portfolio](https://kamijoseph.github.io/Portfolio/)
 
 ## ✨ Features
 - Responsive design for mobile, tablet, and desktop
