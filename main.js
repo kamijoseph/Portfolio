@@ -25,11 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    /* ------------------ TYPING ANIMATION (placed after "I am KAMI") ------------------ */
+    // typing animation
     const words = [
-        "Machine Learning Engineer",
         "Data Scientist",
-        "Deep Learning Specialist",
+        "Machine Learning Engineer",
         "Artificial Intelligence Engineer",
         "Data Analyst"
     ];
