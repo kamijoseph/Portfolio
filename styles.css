@@ -132,14 +132,14 @@ nav ul li a:hover::after{
 #about{
     padding: 80px 0;
     color: #ababab;
-    min-height: 65vh; /* increased height per request */
+    min-height: 65vh;
 }
 
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center; /* vertical align image with content */
+    align-items: center;
     gap: 24px;
 }
 
@@ -326,22 +326,6 @@ nav ul li a:hover::after{
     border-radius: 12px;
     transition: 0.5s;
 }
-
-
-/* @media (max-width: 1024px) {
-    .work {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
-}
-
-@media (max-width: 640px) {
-    .work {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-} */
-
 
 .layer{
     width: 100%;

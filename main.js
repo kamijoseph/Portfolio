@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // typing animation
     const words = [
         "Data Scientist",
+        "Data Analyst",
         "Machine Learning Engineer",
-        "Artificial Intelligence Engineer",
-        "Data Analyst"
+        "Data Visualization",
     ];
     let wordIndex = 0;
     let charIndex = 0;
