@@ -47,7 +47,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(6, 57, 47, 0.08);
+    border-bottom: 1px solid rgba(17, 114, 95, 0.08);
 }
 
 .logo-text {
@@ -205,18 +205,18 @@ nav ul li a:hover::after {
 #experience ul li {
     margin-bottom: 8px;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(6, 57, 47, 0.1);
+    border-bottom: 1px solid rgba(17, 114, 95, 0.1);
     font-size: 0.95rem;
 }
 
 #experience ul li span {
     font-weight: bold;
-    color: rgba(6, 57, 47, 1);
+    color: rgba(17, 114, 95, 1);
     margin-right: 8px;
 }
 
 #experience p a {
-    color: rgba(6, 57, 47, 1);
+    color: rgba(17, 114, 95, 1);
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
