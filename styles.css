@@ -104,6 +104,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h2 span {
+    margin-top: 10px;
     color: #11725f;
     font-weight: 400;
 }
