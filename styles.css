@@ -1,22 +1,22 @@
-/* Styling */
-*{
+/* ---------------------- Global Styling ---------------------- */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background: #080808;
     color: #fff;
 }
 
-/* ----------------- header -------------------- */
-#header{
+/* ---------------------- Header Section ---------------------- */
+#header {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -25,19 +25,17 @@ body{
     padding-bottom: 100px;
 }
 
-.container{
+.container {
     padding: 10px 10%;
 }
 
-/* base nav layout (still applies because nav has same structure) */
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-/* sticky nav: always visible */
 .sticky-nav {
     position: fixed;
     top: 0;
@@ -49,93 +47,87 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255,0,79,0.08);
+    border-bottom: 1px solid rgba(6, 57, 47, 0.08);
 }
 
-/* text logo */
-.logo-text{
+.logo-text {
     font-size: 44px;
     font-weight: 800;
-    color: #ff004f;
+    color: #11725f;
     letter-spacing: 1px;
 }
 
-/* menu */
-.logo{
-    width: 140px;
-}
-
-nav ul{
+nav ul {
     margin: 0;
     padding: 0;
+    display: flex;
 }
-nav ul li{
-    display: inline-block;
+
+nav ul li {
     list-style: none;
     margin: 10px 20px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
 
-nav ul li a::after{
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #11725f;
     position: absolute;
     left: 0;
-    bottom: -0px;
-    transition: .5s;
+    bottom: 0;
+    transition: 0.5s;
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover::after {
     width: 100%;
 }
 
-/* header text */
-.header-text{
+/* ---------------------- Header Text ---------------------- */
+.header-text {
     margin-top: 8%;
     font-size: 30px;
     text-align: left;
 }
 
-.header-text h2{
+.header-text h2 {
     font-size: 60px;
     margin-top: 20px;
     line-height: 1.02;
 }
 
-.header-text h2 span{
-    margin-top: 20px;
-    color: #ff004f;
+.header-text h2 span {
+    color: #11725f;
     font-weight: 400;
 }
 
-/* typing cursor */
 .cursor {
     display: inline-block;
     margin-left: 6px;
     animation: blink 0.7s steps(1) infinite;
-    color: #ff004f;
+    color: #11725f;
     font-weight: 700;
 }
+
 @keyframes blink {
     50% { opacity: 0; }
 }
 
-/* ------------------ about section ---------------- */
-#about{
+/* ---------------------- About Section ---------------------- */
+#about {
     padding: 80px 0;
     color: #ababab;
     min-height: 65vh;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -143,34 +135,34 @@ nav ul li a:hover::after{
     gap: 24px;
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 40%;
     display: flex;
     justify-content: center;
 }
 
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
     border-radius: 15px;
     object-fit: cover;
 }
 
-.about-col-2{
+.about-col-2 {
     flex-basis: 55%;
 }
 
-.sub-title{
+.sub-title {
     font-size: 36px;
     font-weight: 600;
     color: #fff;
 }
 
-.tab-titles{
+.tab-titles {
     display: flex;
     margin: 20px 0 20px;
 }
 
-.tab-links{
+.tab-links {
     margin-right: 40px;
     font-size: 20px;
     font-weight: 600;
@@ -179,35 +171,31 @@ nav ul li a:hover::after{
     color: #fff;
 }
 
-.tab-links::after{
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #11725f;
     position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.25s;
 }
 
-.tab-links:hover::after{
-    width: 100%;
-}
-
+.tab-links:hover::after,
 .tab-links.active::after {
     width: 100%;
 }
 
-/* tab content */
-.tab-contents{
+.tab-contents {
     display: none;
 }
 
-.tab-contents.active-tab{
+.tab-contents.active-tab {
     display: block;
 }
 
-/* Experience list styling */
+/* Experience List Styling */
 #experience ul {
     list-style: none;
     padding: 0;
@@ -217,19 +205,18 @@ nav ul li a:hover::after{
 #experience ul li {
     margin-bottom: 8px;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(255,0,79,0.1);
+    border-bottom: 1px solid rgba(6, 57, 47, 0.1);
     font-size: 0.95rem;
 }
 
 #experience ul li span {
     font-weight: bold;
-    color: rgba(255,0,79,1);
+    color: rgba(6, 57, 47, 1);
     margin-right: 8px;
 }
 
-/* "See Tech Stack" link */
 #experience p a {
-    color: rgba(255,0,79,1);
+    color: rgba(6, 57, 47, 1);
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -239,8 +226,8 @@ nav ul li a:hover::after{
     color: #fff;
 }
 
-/* Skills list styled like social links */
-.skills-list{
+/* Skills List */
+.skills-list {
     list-style: none;
     padding-left: 0;
     display: flex;
@@ -248,11 +235,11 @@ nav ul li a:hover::after{
     gap: 12px;
 }
 
-.skills-list li{
+.skills-list li {
     list-style: none;
 }
 
-.skill-link{
+.skill-link {
     text-decoration: none;
     color: #fff;
     display: inline-flex;
@@ -262,17 +249,16 @@ nav ul li a:hover::after{
     transition: transform .12s, color .12s;
 }
 
-.skill-link i{
-    color: #ff004f;
+.skill-link i {
+    color: #11725f;
 }
 
-/* on hover mimic social link interaction */
-.skill-link:hover{
+.skill-link:hover {
     transform: translateY(-3px);
-    color: #ffb6c6;
+    color: #00b389;
 }
 
-/* Tech stack chips */
+/* Tech Stack Chips */
 .tech-stack-list {
     display: flex;
     flex-wrap: wrap;
@@ -286,19 +272,18 @@ nav ul li a:hover::after{
     background: #1a1a1a;
     color: #fff;
     font-weight: 600;
-    transition: all 0.5s ease; /* Smooth animation */
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .tech-stack-list span:hover {
     transform: translateY(-3px);
-    background: rgba(255,0,79,1);
-    border-color: rgba(255,0,79,1);
+    background: #11725f;
+    border-color: #11725f;
 }
 
-/* -------------------- Portfolio -------------------------*/
-
-#portfolio{
+/* ---------------------- Portfolio ---------------------- */
+#portfolio {
     padding: 50px 0;
 }
 
@@ -317,6 +302,9 @@ nav ul li a:hover::after{
     position: relative;
     overflow: hidden;
     max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .work img {
@@ -327,79 +315,97 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 
-.layer{
+.layer {
     width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.55), #ff004f);
-    border-radius: 12px;
     position: absolute;
     left: 0;
     bottom: 0;
-    overflow: hidden;
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.85));
     text-align: center;
-    padding: 0 40px;
-    font-size: 14px;
     transition: height 0.5s;
 }
 
-.layer h3{
+.layer h3 {
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    transition: transform 0.5s;
+    transform: translateY(0%);
 }
 
-.layer p{
-    font-size: 18px;
-    font-weight: 600px;
+.layer p {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(20px);
 }
 
-.layer a{
-    margin-top: 20px;
+.project-links {
+    margin-top: 12px;
+    display: none;
+    gap: 10px;
+    justify-content: center;
+}
+
+.project-links a {
     text-decoration: none;
-    color: #ff004f;
-    line-height: 60px;
-    font-size: 18px;
-    background: #fff;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    text-align: center;
+    color: #11725f;
+    font-weight: 600;
+    border: 1px solid #11725f;
+    padding: 6px 14px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s, color 0.3s;
 }
 
-.work:hover img{
+.project-links a.github i {
+    font-size: 16px;
+}
+
+.project-links a:hover {
+    background: #11725f;
+    color: #fff;
+}
+
+.work:hover img {
     transform: scale(1.1);
 }
 
-.work:hover .layer{
-    height: 100%;
+.work:hover .layer p {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.btn {
-    margin: 70px auto 0;
-    border-radius: 10px;
+.work:hover .project-links {
+    display: flex;
 }
 
+.work:hover .layer h3 {
+    transform: translateY(-20%);
+}
+
+/* ---------------------- Buttons ---------------------- */
 .btn a {
     width: fit-content;
-    white-space: nowrap; /* Prevents text from wrapping */
-    text-decoration: none;
     display: block;
-    margin: 50px auto;
-    padding: 14px 50px;
+    margin: 30px auto;
+    padding: 12px 40px;
+    text-decoration: none;
     color: #fff;
-    border: 1px solid #ff004f;
-    position: relative;
-    z-index: 1;
-    transition-duration: 0.5s;
+    border: 1px solid #11725f;
     border-radius: 10px;
-    text-transform: uppercase;
     font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
 }
-
 
 .btn a span {
     display: block;
@@ -410,49 +416,34 @@ nav ul li a:hover::after{
     left: 0;
     background: #fff;
     z-index: -1;
-    transition: 0.5s;
+    transition: width 0.5s;
     border-radius: 10px;
 }
 
 .btn a:hover span {
-    background: #ff004f;
-    color: #fff;
     width: 100%;
+    background: #11725f;
+    color: #fff;
 }
 
-.btn-download {
-    margin: 20px 0; 
-    text-align: left;
-}
-
-
-.btn-download a {
-    margin: 0;
-}
-
-
-
-/* Contact Layout */
+/* ---------------------- Contact ---------------------- */
 .contact-wrapper {
     display: flex;
-    align-items: stretch;  /* make divider match tallest column */
+    align-items: stretch;
     gap: 40px;
 }
 
-/* Left & Right columns */
 .contact-left,
 .contact-right {
     flex: 1;
 }
 
-/* Divider Line */
 .contact-divider {
     width: 3px;
-    background-color: #ff004f; /* same as button red */
+    background-color: #11725f;
     flex-shrink: 0;
 }
 
-/* Section Headings */
 .contact-left .sub-title,
 .contact-right .sub-title {
     font-size: 28px;
@@ -460,7 +451,6 @@ nav ul li a:hover::after{
     font-weight: bold;
 }
 
-/* Contact Info Text */
 .contact-left p,
 .contact-right p {
     margin-bottom: 30px;
@@ -468,15 +458,13 @@ nav ul li a:hover::after{
     align-items: center;
 }
 
-/* Icons */
 .contact-left p i,
 .contact-right p i {
-    margin-right: 20px; /* increased gap between icon & text */
+    margin-right: 20px;
     font-size: 25px;
-    color: #ff004f;
+    color: #11725f;
 }
 
-/* Social Links Styled Like Contact Info */
 .contact-right p a {
     text-decoration: none;
     color: #fff;
@@ -486,26 +474,24 @@ nav ul li a:hover::after{
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect for social links */
 .contact-right p a:hover {
-    color: #ff004f;
-    transform: translateY(-3px); /* moves up slightly */
+    color: #11725f;
+    transform: translateY(-3px);
 }
 
-/* Download Resume Button Alignment */
 .btn-download {
     margin: 20px 0;
-    text-align: left;
+    text-align: center;
 }
 
 .btn-download a {
     margin: 0;
+    padding: 10px 30px;
+    border: 1px solid #11725f;
+    border-radius: 8px;
 }
 
-
-/* ------------------- Media Queries for rensponsiveness ------------------- */
-
-/* portfolio responsive */
+/* ---------------------- Media Queries ---------------------- */
 @media (max-width: 1024px) {
     .work {
         flex: 1 1 calc(50% - 40px);
@@ -513,48 +499,39 @@ nav ul li a:hover::after{
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 680px) {
     .work {
         flex: 1 1 100%;
         max-width: 100%;
     }
-}
 
-/* about responsive */
-@media (max-width: 900px) {
-    .about-col-1 { flex-basis: 45%; }
-    .about-col-2 { flex-basis: 50%; }
-}
+    .row {
+        flex-direction: column;
+    }
 
-@media (max-width: 680px) {
-    .row { flex-direction: column; }
-    .about-col-1, .about-col-2 { width: 100%; }
-    .header-text h1 { font-size: 40px; text-align: center; }
-}
+    .about-col-1,
+    .about-col-2 {
+        width: 100%;
+    }
 
-/* contact responsive */
-@media (max-width: 768px) {
+    .header-text h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .logo-text {
+        font-size: 36px;
+    }
+
     .contact-wrapper {
         flex-direction: column;
     }
+
     .contact-divider {
         display: none;
     }
-    .header-text {
-        margin-top: 18%;
-        text-align: center;
-    }
-    .logo-text { font-size: 36px; }
-}
 
-@media (max-width: 768px) {
-    /* hide the menu items */
     #sidemenu {
         display: none;
     }
-    
-    .sticky-nav {
-        padding: 10px 5%;
-    }
 }
-
